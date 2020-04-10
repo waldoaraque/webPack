@@ -1,3 +1,5 @@
+import '../css/style.css';
+
 class User {
     constructor(name) {
         this.name = name
