@@ -1,3 +1,8 @@
-const cart = ['Producto 1', 'Producto 2', 'Producto 4']
+class User {
+    constructor(name) {
+        this.name = name
+    }
+}
 
-console.log(cart)
+const user = new User('Waldo')
+console.log(user)

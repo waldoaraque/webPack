@@ -1,7 +1,12 @@
 # webPack
 An simple project to learn WebPack
 
-running the command:
+Running the command:
 ```
-npm run webpack
+$ npm run webpack
+```
+
+Install babel:
+```
+$ npm install --save-dev @babel/cli @babel/core @babel/preset-env @babel/register babel-loader
 ```
