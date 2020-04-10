@@ -1,0 +1,24 @@
+{
+  "name": "learning-webpack",
+  "version": "1.0.0",
+  "description": "An simple project to learn WebPack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waldoaraque/webPack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waldoaraque/webPack/issues"
+  },
+  "homepage": "https://github.com/waldoaraque/webPack#readme",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
