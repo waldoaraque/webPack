@@ -1,10 +1,18 @@
 const path = require('path')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/js/index.js'
+    },
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, '/dist')
+    },
+    devSever: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 9000
     },
     module: {
         rules: [
@@ -31,5 +39,22 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'common',
+                    chunks: 'all'
+                }
+            }
+        }
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            filename: 'index.html',
+            template: './index.html'
+        })
+    ]
 }
